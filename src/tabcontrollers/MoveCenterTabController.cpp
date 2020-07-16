@@ -630,8 +630,8 @@ void MoveCenterTabController::setHeightToggle( bool value, bool notify )
         // Don't move bump around on y axis if gravity is active
         if ( !m_gravityActive )
         {
-            m_offsetY += heightToggleOffset();
-            emit offsetYChanged( m_offsetY );
+            m_offsetX += heightToggleOffset();
+            emit offsetYChanged( m_offsetX );
         }
         m_gravityFloor = heightToggleOffset();
     }
@@ -641,8 +641,8 @@ void MoveCenterTabController::setHeightToggle( bool value, bool notify )
         // Don't move bump around on y axis if gravity is active
         if ( !m_gravityActive )
         {
-            m_offsetY -= heightToggleOffset();
-            emit offsetYChanged( m_offsetY );
+            m_offsetX -= heightToggleOffset();
+            emit offsetXChanged( m_offsetX );
         }
         m_gravityFloor = 0.0f;
     }
